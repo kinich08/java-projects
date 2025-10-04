@@ -28,8 +28,7 @@ class problems {
             return;
         }
        }
-        System.out.println(" primne");
-       
+        System.out.println(" primne");   
    }    
    static void strong(int n){
      int gn=n;
@@ -67,15 +66,20 @@ class problems {
 public class operation {
     public static void main(String[] args) {
         Scanner O=new Scanner(System.in);
-
-        System.out.println("options:");
-        System.out.println("1.factorial:");
-         System.out.println("2.prime:");
-          System.out.println("1.strong:");
-           System.out.println("1.perfect:");
+        int c;
+      do{
+         System.out.println("options:");
+          System.out.println("1.factorial:");
+          System.out.println("2.prime:");
+           System.out.println("3.strong:");
+            System.out.println("4.perfect:");
+             System.out.println("0.exit:");
          System.out.print("enter your choice:"); 
-         int c=O.nextInt();
-         
+         c=O.nextInt();
+          if(c==0){
+            System.out.println("exiting from program");
+            break;
+          }
          System.out.println("enter a number");
          int num=O.nextInt();
 
@@ -97,7 +101,7 @@ public class operation {
              System.out.println("invalid choice");
                 break;
           }
-         
-
+        }
+        while(c!=0); 
     }
 }
