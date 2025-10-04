@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+class problems {
+    static void fact(int n){     
+        long fact=1;
+        for(int i=1;i<=n;i++){
+            fact*=i;
+        }
+        long t=fact;
+        long sum=0;
+        while(t>0){
+            sum+=t%10;
+            t/=10;
+        }
+        System.out.println("factorial:"+fact);
+        System.out.println("sum:"+sum);
+    }
+
+   static void prime(int n){
+       if(n<=1){
+         System.out.println("not primne");
+       }
+      
+       int i=0;
+       for(i=2;i<=Math.sqrt(n);i++){
+        if(n%i==0){
+            System.out.println("not primne");
+            return;
+        }
+       }
+        System.out.println(" primne");
+       
+   }    
+   static void strong(int n){
+     int gn=n;
+        long sum=0;
+        while (n>0) {
+            int s=n%10;
+
+        long fact=1;
+        for(int i=1;i<=s;i++){
+            fact*=i;
+        }
+        sum=sum+fact;
+        n=n/10;
+      }
+       if(sum==gn)
+        System.out.println("strong number:"+sum);
+       else
+        System.out.println("not strong");
+   }
+   static void perfect(int n){
+         int sum=0;
+        int i=0;
+        for(i=1;i<=n/2;i++){
+            if(n%i==0){
+             sum=sum+i;
+            }
+        }
+       if(sum==n)
+        System.out.println("perfect number:"+sum);
+       else
+        System.out.println(" not perfect");
+   }
+}
+
+public class operation {
+    public static void main(String[] args) {
+        Scanner O=new Scanner(System.in);
+
+        System.out.println("options:");
+        System.out.println("1.factorial:");
+         System.out.println("2.prime:");
+          System.out.println("1.strong:");
+           System.out.println("1.perfect:");
+         System.out.print("enter your choice:"); 
+         int c=O.nextInt();
+         
+         System.out.println("enter a number");
+         int num=O.nextInt();
+
+         switch (c) {
+            case 1:
+                problems.fact(num);
+                break;
+            case 2:
+                problems.prime(num);
+                break;
+            case 3:
+                problems.strong(num);
+                break;
+            case 4:
+                problems.perfect(num);
+                break;
+         
+            default:
+             System.out.println("invalid choice");
+                break;
+          }
+         
+
+    }
+}
