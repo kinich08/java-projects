@@ -7,11 +7,11 @@ class Vehicle {
     private double fuelEfficiency;
 
     public Vehicle(String make, String model, int year, String fuelType, double fuelEfficiency) {
-        this.make = make;
-        this.model = model;
-        this.year = year;
-        this.fuelType = fuelType;
-        this.fuelEfficiency = fuelEfficiency;
+        this.make =make;
+        this.model =model;
+        this.year =year;
+        this.fuelType =fuelType;
+        this.fuelEfficiency =fuelEfficiency;
     }
     public String getMake() {
         return make;
@@ -39,7 +39,6 @@ class Vehicle {
     }
 }
 class Truck extends Vehicle {
-
     private double cargoCapacity;
 
     public Truck(String make, String model, int year, String fuelType, double fuelEfficiency, double cargoCapacity) {
@@ -86,7 +85,6 @@ class Car extends Vehicle {
         return 120;
     }
 }
-
 public class inheritanceP4{
     public static void main(String[] args) {
 
@@ -102,6 +100,5 @@ public class inheritanceP4{
         System.out.println("Fuel Efficiency: " +car.calculateFuelEfficiency()+" mpg");
         System.out.println("Distance Traveled: " +car.calculateDistanceTraveled()+" miles");
         System.out.println("Max Speed: " +car.getMaxSpeed()+" mph\n");
-
     }
 }
