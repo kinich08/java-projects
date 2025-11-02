@@ -9,7 +9,6 @@ class car extends vehicle{
         System.out.println("repairing car");
     }
 }
-
 public class inheritanceP1{
     public static void main(String[] args) {
         car c1=new car();
