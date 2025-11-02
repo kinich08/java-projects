@@ -28,7 +28,7 @@ class HRManager extends Employee{
 public class inheritanceP2 {
     public static void main(String[] args) {
         Employee e=new Employee(30000);
-        HRManager m=new HRManager(50000);
+        HRManager m= new HRManager(50000);
         e.work();
         System.out.println("Employee salary: " + e.GetSalary());
         m.work();
