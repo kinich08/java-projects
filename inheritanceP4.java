@@ -13,55 +13,55 @@ class Vehicle {
         this.fuelType =fuelType;
         this.fuelEfficiency =fuelEfficiency;
     }
-    public String getMake() {
+    public String getMake(){
         return make;
     }
-    public String getModel() {
+    public String getModel(){
         return model;
     }
-    public int getYear() {
+    public int getYear(){
         return year;
     }
-    public String getFuelType() {
+    public String getFuelType(){
         return fuelType;
     }
-    public double getFuelEfficiency() {
+    public double getFuelEfficiency(){
         return fuelEfficiency;
     }
-    public double calculateFuelEfficiency() {
+    public double calculateFuelEfficiency(){
         return fuelEfficiency;
     }
-    public double calculateDistanceTraveled() {
+    public double calculateDistanceTraveled(){
         return 0;
     }
-    public double getMaxSpeed() {
+    public double getMaxSpeed(){
         return 0;
     }
 }
-class Truck extends Vehicle {
+class Truck extends Vehicle{
     private double cargoCapacity;
 
     public Truck(String make, String model, int year, String fuelType, double fuelEfficiency, double cargoCapacity) {
         super(make, model, year, fuelType, fuelEfficiency);
         this.cargoCapacity = cargoCapacity;
     }
-    public double getCargoCapacity() {
+    public double getCargoCapacity(){
         return cargoCapacity;
     }
     @Override
-    public double calculateFuelEfficiency() {
+    public double calculateFuelEfficiency(){
         return getFuelEfficiency() * (1.0 / (1.0 + (getCargoCapacity() / 1000.0)));
     }
     @Override
-    public double calculateDistanceTraveled() {
+    public double calculateDistanceTraveled(){
         return calculateFuelEfficiency() * getFuelEfficiency();
     }
     @Override
-    public double getMaxSpeed() {
+    public double getMaxSpeed(){
         return 80;
     }
 }
-class Car extends Vehicle {
+class Car extends Vehicle{
 
     private int numSeats;
 
@@ -69,15 +69,15 @@ class Car extends Vehicle {
         super(make, model, year, fuelType, fuelEfficiency);
         this.numSeats = numSeats;
     }
-    public int getNumSeats() {
+    public int getNumSeats(){
         return numSeats;
     }
     @Override
-    public double calculateFuelEfficiency() {
+    public double calculateFuelEfficiency(){
         return getFuelEfficiency() * (1.0 / (1.0 + (getNumSeats() / 5.0)));
     }
     @Override
-    public double calculateDistanceTraveled() {
+    public double calculateDistanceTraveled(){
         return calculateFuelEfficiency() * getFuelEfficiency();
     }
     @Override
@@ -86,10 +86,10 @@ class Car extends Vehicle {
     }
 }
 public class inheritanceP4{
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
-        Truck truck = new Truck("Tatra", "Tatra 810 4x4", 2020, "GASOLINE", 8.112, 4.5);
-        Car car = new Car("Volkswagen", "Virtus", 2019, "HYBRID", 6.123, 8);
+        Truck truck =new Truck("Tatra", "Tatra 810 4x4", 2020, "GASOLINE", 8.112, 4.5);
+        Car car =new Car("Volkswagen", "Virtus", 2019, "HYBRID", 6.123, 8);
 
         System.out.println("Truck Model: " +truck.getModel());
         System.out.println("Fuel Efficiency: " +truck.calculateFuelEfficiency()+" mpg");
