@@ -5,7 +5,7 @@ abstract class Person {
 } 
 class Athlete extends Person{
   @Override
-  public void eat(){
+  public void eat() {
     System.out.println("\nAthlete: Eats healthy foods");
   }
   @Override
