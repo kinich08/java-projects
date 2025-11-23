@@ -5,7 +5,7 @@ abstract class Animal{
     public abstract void sleep();
 }
 class Lion extends Animal{
-    @Override
+    @Override 
     public void eat(){
         System.out.println("\nLion eats meat.");
     }
@@ -49,5 +49,6 @@ public class problem4{
         deer.sleep();
     }
 } 
+
 
 
